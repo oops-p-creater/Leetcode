@@ -29,6 +29,6 @@ class Solution():
         return ans
             
 s=Solution()
-print(s.myAtoi("+6465-5445"))
+print(s.myAtoi(""))
             
         
