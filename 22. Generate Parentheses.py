@@ -11,15 +11,15 @@ class Solution(object):
             if(c==n and o==n):
                 ans.append(temp[::])
                 return
-            else:
-                if(o>c):
-                    
-                    recur(n,temp+")",o,c+1)
-                if(o<n):
-                    
-                    recur(n,temp+"(",o+1,c)
-                
-                
+            if(o<n):
+                temp=temp+"("
+                recur(n,temp,o+1,c)
+                temp=temp[:-1]
+            if(o>c):
+                temp=temp+")"
+                recur(n,temp,o,c+1)
+                temp=temp[:-1]
+            return
         recur(n,"",0,0)
         return (ans)
 s=Solution()
