@@ -1,0 +1,35 @@
+s="ULULDLLUDL"
+def getMaxDeletions(s):
+    n=len(s)
+    u=0
+    d=0
+    l=0
+    r=0
+    c=0
+    for i in s:
+        if(i=="U"):
+            if(d>0):
+                d=d-1
+                c=c+2
+            else:
+                u=u+1
+        elif(i=="R"):
+            if(l>0):
+                l=l-1
+                c=c+2
+            else:
+                r=r+1
+        elif(i=="D"):
+            if(d>0):
+                u=u-1
+                c=c+2
+            else:
+                d=d+1
+        else:
+            if(r>0):
+                r=r-1
+                c=c+2
+            else:
+                l=l+1
+    return(c)
+print(getMaxDeletions(s))

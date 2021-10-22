@@ -22,4 +22,4 @@ class Solution(object):
             nums.sort()
         return nums
 s=Solution()
-print(s.nextPermutation([2,7,5]))
+print(s.nextPermutation([1,2,8,6,3]))
